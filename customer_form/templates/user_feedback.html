@@ -1,0 +1,83 @@
+
+
+
+
+{% if text %}
+<div class="card mb-3 col-6">
+    <div class="card-body">
+        <div class="mb-2">
+            <label class="form-label">Enter your over all experince</label>
+            <input type="text" class="form-control mt-2 shadow-none" placeholder="">
+        </div>
+    </div>
+</div>
+
+{% elif textarea %}
+
+<div class="card mb-3 col-6" >
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label">Enter your over all experince</label>
+            <textarea class="form-control" rows="3"></textarea>
+        </div>
+    </div>
+</div>
+
+
+
+{% elif select %}
+<div class="card mb-3 col-6" >
+    <div class="card-body">
+        <div class="mb-3">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+        </div>
+    </div>
+</div>
+
+
+{% elif checkbox %}
+<div class="card mb-3 col-6">
+    <div class="card-body">
+        <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with checkbox">
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Checked checkbox
+            </label>
+          </div>
+    </div>
+</div>
+
+
+{% elif radio %}
+<div class="card mb-3 col-6">
+    <div class="card-body">
+        <div class="input-group">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with radio button">
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div>
+        
+    </div>
+</div>
+
+
+
+{% endif %}

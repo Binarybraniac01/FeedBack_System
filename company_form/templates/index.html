@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+    
+<div class="container p-2 d-flex flex-row align-items-start">
+
+    <form class="container p-5 bg-secondary col-10" id="com_form" method="post">
+        {% csrf_token %}
+        <div id="content" class="d-flex flex-column align-items-center">
+
+            <div class="card mb-3 col-10">
+                <div class="card-body">
+                    <div class="mb-2">
+                        <textarea class="form-control border-0 shadow-none text-center text-uppercase fw-bold fs-3" rows="1" name="company_name" placeholder="Enter Company Name"></textarea>
+                        <textarea class="form-control border-0 shadow-none fs-5" rows="1" name="text_field_title" placeholder="Enter Title here"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+                <button class="btn btn-primary ms-3" hx-get="{% url 'options' 'text_val' %}" hx-target="#content" hx-swap="beforeend settle:500ms">Add TextField</button>
+                <button class="btn btn-primary ms-3" hx-get="{% url 'options' 'textarea_val' %}" hx-target="#content" hx-swap="beforeend settle:500ms">Add TextArea</button>
+                <button class="btn btn-primary ms-3" hx-get="{% url 'options' 'radio_val' %}" hx-target="#content" hx-swap="beforeend settle:500ms">Add Radio</button>
+                <button class="btn btn-primary ms-3" hx-get="{% url 'options' 'checkbox_val' %}" hx-target="#content" hx-swap="beforeend settle:500ms">Add Checkbox</button>
+                <button class="btn btn-primary ms-3" hx-get="{% url 'options' 'select_val' %}" hx-target="#content" hx-swap="beforeend settle:500ms">Add Select</button>
+        </div>
+   
+    </form>
+
+    <button class="btn btn-success" form="com_form" href="/">Save</button>
+</div>
+
+
+{% endblock %}
