@@ -35,7 +35,7 @@ This project is currently under development. Key features are being built and te
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/Binarybraniac01/FeedBack_System.git
    ```
 
 2. Install dependencies (to be updated once the `requirements.txt` file is complete):
